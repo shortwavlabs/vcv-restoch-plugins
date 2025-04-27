@@ -95,10 +95,10 @@ struct ReGrandy : Module
     configParam(GRATCV_PARAM, 0.f, 1.f, 0.f, "Grain CV");
     configParam(ENVS_PARAM, 1.0f, 4.0f, 4.0f, "Envelope");
     configParam(FCAR_PARAM, -4.f, 4.f, 0.f, "Carrier");
-    configParam(FMOD_PARAM, -4.f, 4.f, 0.f, "F Modulator");
-    configParam(FMODCV_PARAM, 0.f, 1.f, 0.f, "F Modulator CV");
-    configParam(IMOD_PARAM, -4.f, 4.f, 0.f, "I Modulator");
-    configParam(IMODCV_PARAM, 0.f, 1.f, 0.f, "I Modulator CV");
+    configParam(FMOD_PARAM, -4.f, 4.f, 0.f, "FMod");
+    configParam(FMODCV_PARAM, 0.f, 1.f, 0.f, "FMod CV");
+    configParam(IMOD_PARAM, -4.f, 4.f, 0.f, "IMod");
+    configParam(IMODCV_PARAM, 0.f, 1.f, 0.f, "IMod CV");
     configParam(FMTR_PARAM, 0.0f, 1.0f, 0.0f, "FM");
   }
 
@@ -110,7 +110,7 @@ struct ReGrandyWidget : ModuleWidget
   ReGrandyWidget(ReGrandy *module)
   {
     setModule(module);
-    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/ReGrandy-v3.svg")));
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/ReGrandy-v4c.svg")));
 
     addChild(createWidget<ScrewSilver>(Vec(0, 0)));
     addChild(createWidget<ScrewSilver>(Vec(box.size.x - 1 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
