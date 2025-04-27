@@ -151,39 +151,39 @@ struct ReStitcher : Module
 
     for (int i = 0; i < NUM_OSCS; i++)
     {
-      configParam(F_PARAM + i, -4.f, 4.f, 0.f);
-      configParam(B_PARAM + i, 3.f, MAX_BPTS, 0.f);
-      configParam(A_PARAM + i, 0.f, 1.f, 0.f);
-      configParam(D_PARAM + i, 0.f, 1.f, 0.f);
-      configParam(G_PARAM + i, 0.7, 1.3, 0.0);
-      configParam(FCV_PARAM + i, 0.f, 1.f, 0.f);
-      configParam(BCV_PARAM + i, 0.f, 1.f, 0.f);
-      configParam(ACV_PARAM + i, 0.f, 1.f, 0.f);
-      configParam(DCV_PARAM + i, 0.f, 1.f, 0.f);
-      configParam(GCV_PARAM + i, 0.f, 1.f, 0.f);
-      configParam(ST_PARAM + i, 1.f, 5.f, 5.f);
+      configParam(F_PARAM + i, -4.f, 4.f, 0.f, "Oscillator frequency");
+      configParam(B_PARAM + i, 3.f, MAX_BPTS, 0.f, "Number of breakpoints");
+      configParam(A_PARAM + i, 0.f, 1.f, 0.f, "Maximum amplitude step");
+      configParam(D_PARAM + i, 0.f, 1.f, 0.f, "Maximum duration step");
+      configParam(G_PARAM + i, 0.7, 1.3, 0.0, "Granulation rate");
+      configParam(FCV_PARAM + i, 0.f, 1.f, 0.f, "Frequency CV amount");
+      configParam(BCV_PARAM + i, 0.f, 1.f, 0.f, "Breakpoints CV amount");
+      configParam(ACV_PARAM + i, 0.f, 1.f, 0.f, "Amplitude step CV amount");
+      configParam(DCV_PARAM + i, 0.f, 1.f, 0.f, "Duration step CV amount");
+      configParam(GCV_PARAM + i, 0.f, 1.f, 0.f, "Granulation rate CV amount");
+      configParam(ST_PARAM + i, 1.f, 5.f, 5.f, "Stutter - number of cycles to output");
     }
 
-    configParam(G_FREQ_PARAM, -1.f, 1.f, 0.f);
-    configParam(G_BPTS_PARAM, -1.f, 1.f, 0.f);
-    configParam(G_ASTP_PARAM, -1.f, 1.f, 0.f);
-    configParam(G_DSTP_PARAM, -1.f, 1.f, 0.f);
-    configParam(G_GRAT_PARAM, -1.f, 1.f, 0.f);
-    configParam(G_FCAR_PARAM, -1.f, 1.f, 0.f);
-    configParam(G_FMOD_PARAM, -1.f, 1.f, 0.f);
-    configParam(G_IMOD_PARAM, -1.f, 1.f, 0.f);
-    configParam(G_FREQCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(G_BPTSCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(G_ASTPCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(G_DSTPCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(G_GRATCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(G_FCARCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(G_FMODCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(G_IMODCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(G_NOSC_PARAM, 1.f, 4.f, 4.f);
-    configParam(FMTR_PARAM, 0.0f, 1.0f, 0.0f);
-    configParam(MIRR_PARAM, 0.f, 1.f, 0.f);
-    configParam(PDST_PARAM, 0.f, 2.f, 0.f);
+    configParam(G_FREQ_PARAM, -1.f, 1.f, 0.f, "Global frequency modifier");
+    configParam(G_BPTS_PARAM, -1.f, 1.f, 0.f, "Global breakpoints modifier");
+    configParam(G_ASTP_PARAM, -1.f, 1.f, 0.f, "Global amplitude step modifier");
+    configParam(G_DSTP_PARAM, -1.f, 1.f, 0.f, "Global duration step modifier");
+    configParam(G_GRAT_PARAM, -1.f, 1.f, 0.f, "Global granulation rate modifier");
+    configParam(G_FCAR_PARAM, -1.f, 1.f, 0.f, "Global carrier frequency modifier");
+    configParam(G_FMOD_PARAM, -1.f, 1.f, 0.f, "Global modulation frequency modifier");
+    configParam(G_IMOD_PARAM, -1.f, 1.f, 0.f, "Global modulation index modifier");
+    configParam(G_FREQCV_PARAM, 0.f, 1.f, 0.f, "Global frequency CV amount");
+    configParam(G_BPTSCV_PARAM, 0.f, 1.f, 0.f, "Global breakpoints CV amount");
+    configParam(G_ASTPCV_PARAM, 0.f, 1.f, 0.f, "Global amplitude step CV amount");
+    configParam(G_DSTPCV_PARAM, 0.f, 1.f, 0.f, "Global duration step CV amount");
+    configParam(G_GRATCV_PARAM, 0.f, 1.f, 0.f, "Global granulation rate CV amount");
+    configParam(G_FCARCV_PARAM, 0.f, 1.f, 0.f, "Global carrier frequency CV amount");
+    configParam(G_FMODCV_PARAM, 0.f, 1.f, 0.f, "Global modulation frequency CV amount");
+    configParam(G_IMODCV_PARAM, 0.f, 1.f, 0.f, "Global modulation index CV amount");
+    configParam(G_NOSC_PARAM, 1.f, 4.f, 4.f, "Number of active oscillators");
+    configParam(FMTR_PARAM, 0.0f, 1.0f, 0.0f, "FM mode toggle");
+    configParam(MIRR_PARAM, 0.f, 1.f, 0.f, "Mirror toggle - mirror vs wrap breakpoints");
+    configParam(PDST_PARAM, 0.f, 2.f, 0.f, "Probability distribution - Linear/Cauchy/Arcsin");
   }
 
   void process(const ProcessArgs &args) override;

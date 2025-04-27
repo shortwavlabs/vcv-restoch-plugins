@@ -88,24 +88,24 @@ struct ReGrandy : Module
     config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
 
     configParam(FREQ_PARAM, -4.0, 3.0, 0.0, "Frequency");
-    configParam(FREQCV_PARAM, 0.f, 1.f, 0.f, "Frequency CV");
-    configParam(BPTS_PARAM, 3, MAX_BPTS, 0, "Bandpass");
-    configParam(BPTSCV_PARAM, 0.f, 1.f, 0.f, "Bandpass CV");
-    configParam(DSTP_PARAM, 0.f, 1.f, 0.f, "Duty");
-    configParam(DSTPCV_PARAM, 0.f, 1.f, 0.f, "Duty CV");
-    configParam(ASTP_PARAM, 0.f, 1.f, 0.f, "Attack");
-    configParam(ASTPCV_PARAM, 0.f, 1.f, 0.f, "Attack CV");
-    configParam(PDST_PARAM, 0.f, 2.f, 0.f, "Pulse Width");
-    configParam(MIRR_PARAM, 0.f, 1.f, 0.f, "Mirror");
-    configParam(GRAT_PARAM, -6.f, 3.f, 0.f, "Grain");
-    configParam(GRATCV_PARAM, 0.f, 1.f, 0.f, "Grain CV");
-    configParam(ENVS_PARAM, 1.0f, 4.0f, 4.0f, "Envelope");
-    configParam(FCAR_PARAM, -4.f, 4.f, 0.f, "Carrier");
-    configParam(FMOD_PARAM, -4.f, 4.f, 0.f, "FMod");
-    configParam(FMODCV_PARAM, 0.f, 1.f, 0.f, "FMod CV");
-    configParam(IMOD_PARAM, -4.f, 4.f, 0.f, "IMod");
-    configParam(IMODCV_PARAM, 0.f, 1.f, 0.f, "IMod CV");
-    configParam(FMTR_PARAM, 0.0f, 1.0f, 0.0f, "FM");
+    configParam(FREQCV_PARAM, 0.f, 1.f, 0.f, "Frequency CV Amount");
+    configParam(BPTS_PARAM, 3, MAX_BPTS, 0, "Number of Breakpoints");
+    configParam(BPTSCV_PARAM, 0.f, 1.f, 0.f, "Breakpoints CV Amount");
+    configParam(DSTP_PARAM, 0.f, 1.f, 0.f, "Maximum Duration Step");
+    configParam(DSTPCV_PARAM, 0.f, 1.f, 0.f, "Duration Step CV Amount");
+    configParam(ASTP_PARAM, 0.f, 1.f, 0.f, "Maximum Amplitude Step");
+    configParam(ASTPCV_PARAM, 0.f, 1.f, 0.f, "Amplitude Step CV Amount");
+    configParam(PDST_PARAM, 0.f, 2.f, 0.f, "Probability Distribution", "l - LINEAR, c - CAUCHY, a - ARCSIN");
+    configParam(MIRR_PARAM, 0.f, 1.f, 0.f, "Mirror Mode", "Toggle between wrapping and mirroring of breakpoints");
+    configParam(GRAT_PARAM, -6.f, 3.f, 0.f, "Granulation Frequency", "Control frequency of the sin wave that is granulated");
+    configParam(GRATCV_PARAM, 0.f, 1.f, 0.f, "Granulation Frequency CV Amount");
+    configParam(ENVS_PARAM, 1.0f, 4.0f, 4.0f, "Envelope Type");
+    configParam(FCAR_PARAM, -4.f, 4.f, 0.f, "FM Carrier Frequency");
+    configParam(FMOD_PARAM, -4.f, 4.f, 0.f, "FM Modulation Frequency");
+    configParam(FMODCV_PARAM, 0.f, 1.f, 0.f, "FM Modulation Frequency CV Amount");
+    configParam(IMOD_PARAM, -4.f, 4.f, 0.f, "FM Modulation Index");
+    configParam(IMODCV_PARAM, 0.f, 1.f, 0.f, "FM Modulation Index CV Amount");
+    configParam(FMTR_PARAM, 0.0f, 1.0f, 0.0f, "FM Mode Toggle");
   }
 
   void process(const ProcessArgs &args) override;
