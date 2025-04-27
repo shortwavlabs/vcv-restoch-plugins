@@ -9,6 +9,7 @@ void init(Plugin *p) {
 
 	// Add modules here
 	p->addModel(modelBlank);
+	p->addModel(modelReGenEcho);
 	p->addModel(modelReGrandy);
 	p->addModel(modelReStitcher);
 

@@ -32,6 +32,14 @@
         "Granular",
         "VCO"
       ]
+    },
+    {
+      "slug": "ReGenEcho",
+      "name": "ReGenEcho",
+      "description": "A module for stochastic decomposition make of it what you will",
+      "tags": [
+        "Effect"
+      ]
     }
   ]
 }
