@@ -201,74 +201,74 @@ struct ReStitcherWidget : ModuleWidget
 
     for (int i = 0; i < NUM_OSCS; i++)
     {
-      addParam(createParam<RoundSmallBlackKnob>(Vec(20.004, 10.89 + (i * 95)), module, ReStitcher::F_PARAM + i));
-      addParam(createParam<RoundSmallBlackKnob>(Vec(46.004, 10.89 + (i * 95)), module, ReStitcher::B_PARAM + i));
+      addParam(createParam<RoundSmallBlackKnob>(Vec(18.004, 10.89 + (i * 95)), module, ReStitcher::F_PARAM + i));
+      addParam(createParam<RoundSmallBlackKnob>(Vec(44.004, 10.89 + (i * 95)), module, ReStitcher::B_PARAM + i));
 
-      addParam(createParam<RoundSmallBlackKnob>(Vec(72.004, 10.89 + (i * 95)), module, ReStitcher::A_PARAM + i));
-      addParam(createParam<RoundSmallBlackKnob>(Vec(98.004, 10.89 + (i * 95)), module, ReStitcher::D_PARAM + i));
+      addParam(createParam<RoundSmallBlackKnob>(Vec(70.004, 10.89 + (i * 95)), module, ReStitcher::A_PARAM + i));
+      addParam(createParam<RoundSmallBlackKnob>(Vec(96.004, 10.89 + (i * 95)), module, ReStitcher::D_PARAM + i));
 
-      addParam(createParam<RoundSmallBlackKnob>(Vec(124.004, 10.89 + (i * 95)), module, ReStitcher::G_PARAM + i));
+      addParam(createParam<RoundSmallBlackKnob>(Vec(122.004, 10.89 + (i * 95)), module, ReStitcher::G_PARAM + i));
 
-      addParam(createParam<RoundSmallBlackKnob>(Vec(20.004, 36.89 + (i * 95)), module, ReStitcher::FCV_PARAM + i));
-      addParam(createParam<RoundSmallBlackKnob>(Vec(46.004, 36.89 + (i * 95)), module, ReStitcher::BCV_PARAM + i));
+      addParam(createParam<RoundSmallBlackKnob>(Vec(18.004, 36.89 + (i * 95)), module, ReStitcher::FCV_PARAM + i));
+      addParam(createParam<RoundSmallBlackKnob>(Vec(44.004, 36.89 + (i * 95)), module, ReStitcher::BCV_PARAM + i));
 
-      addParam(createParam<RoundSmallBlackKnob>(Vec(72.004, 36.89 + (i * 95)), module, ReStitcher::ACV_PARAM + i));
-      addParam(createParam<RoundSmallBlackKnob>(Vec(98.004, 36.89 + (i * 95)), module, ReStitcher::DCV_PARAM + i));
+      addParam(createParam<RoundSmallBlackKnob>(Vec(70.004, 36.89 + (i * 95)), module, ReStitcher::ACV_PARAM + i));
+      addParam(createParam<RoundSmallBlackKnob>(Vec(96.004, 36.89 + (i * 95)), module, ReStitcher::DCV_PARAM + i));
 
-      addParam(createParam<RoundSmallBlackKnob>(Vec(124.004, 36.89 + (i * 95)), module, ReStitcher::GCV_PARAM + i));
+      addParam(createParam<RoundSmallBlackKnob>(Vec(122.004, 36.89 + (i * 95)), module, ReStitcher::GCV_PARAM + i));
 
       // stutter param
-      addParam(createParam<RoundBlackSnapKnob>(Vec(159.640, 23.57 + (i * 95)), module, ReStitcher::ST_PARAM + i));
+      addParam(createParam<RoundBlackSnapKnob>(Vec(157.640, 23.57 + (i * 95)), module, ReStitcher::ST_PARAM + i));
 
       // CV inputs
-      addInput(createInput<PJ301MPort>(Vec(20.004, 64.39 + (i * 95)), module, ReStitcher::F_INPUT + i));
-      addInput(createInput<PJ301MPort>(Vec(46.004, 64.39 + (i * 95)), module, ReStitcher::B_INPUT + i));
+      addInput(createInput<PJ301MPort>(Vec(18.004, 64.39 + (i * 95)), module, ReStitcher::F_INPUT + i));
+      addInput(createInput<PJ301MPort>(Vec(44.004, 64.39 + (i * 95)), module, ReStitcher::B_INPUT + i));
 
-      addInput(createInput<PJ301MPort>(Vec(72.004, 64.39 + (i * 95)), module, ReStitcher::A_INPUT + i));
-      addInput(createInput<PJ301MPort>(Vec(98.004, 64.39 + (i * 95)), module, ReStitcher::D_INPUT + i));
+      addInput(createInput<PJ301MPort>(Vec(70.004, 64.39 + (i * 95)), module, ReStitcher::A_INPUT + i));
+      addInput(createInput<PJ301MPort>(Vec(96.004, 64.39 + (i * 95)), module, ReStitcher::D_INPUT + i));
 
-      addInput(createInput<PJ301MPort>(Vec(124.004, 64.39 + (i * 95)), module, ReStitcher::G_INPUT + i));
+      addInput(createInput<PJ301MPort>(Vec(122.004, 64.39 + (i * 95)), module, ReStitcher::G_INPUT + i));
 
       // light to signal if oscillator on / off
-      addChild(createLight<SmallLight<GreenLight>>(Vec(159.185, 75 + (i * 95)), module, ReStitcher::ONOFF_LIGHT + i));
+      addChild(createLight<SmallLight<GreenLight>>(Vec(157.185, 75 + (i * 95)), module, ReStitcher::ONOFF_LIGHT + i));
     }
 
     // global controls (on the right of the panel)
-    addParam(createParam<RoundSmallBlackKnob>(Vec(241.140, 26.77), module, ReStitcher::G_FREQ_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(241.140, 60.77), module, ReStitcher::G_BPTS_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(241.140, 94.77), module, ReStitcher::G_ASTP_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(241.140, 128.77), module, ReStitcher::G_DSTP_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(241.140, 161.77), module, ReStitcher::G_GRAT_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(241.140, 200.77), module, ReStitcher::G_FCAR_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(241.140, 234.77), module, ReStitcher::G_FMOD_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(241.140, 268.77), module, ReStitcher::G_IMOD_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(239.140, 26.77), module, ReStitcher::G_FREQ_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(239.140, 60.77), module, ReStitcher::G_BPTS_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(239.140, 94.77), module, ReStitcher::G_ASTP_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(239.140, 128.77), module, ReStitcher::G_DSTP_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(239.140, 161.77), module, ReStitcher::G_GRAT_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(239.140, 200.77), module, ReStitcher::G_FCAR_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(239.140, 234.77), module, ReStitcher::G_FMOD_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(239.140, 268.77), module, ReStitcher::G_IMOD_PARAM));
 
-    addParam(createParam<RoundSmallBlackKnob>(Vec(273.140, 26.77), module, ReStitcher::G_FREQCV_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(273.140, 60.77), module, ReStitcher::G_BPTSCV_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(273.140, 94.77), module, ReStitcher::G_ASTPCV_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(273.140, 128.77), module, ReStitcher::G_DSTPCV_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(273.140, 161.77), module, ReStitcher::G_GRATCV_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(273.140, 200.77), module, ReStitcher::G_FCARCV_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(273.140, 234.77), module, ReStitcher::G_FMODCV_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(273.140, 268.77), module, ReStitcher::G_IMODCV_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(271.140, 26.77), module, ReStitcher::G_FREQCV_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(271.140, 60.77), module, ReStitcher::G_BPTSCV_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(271.140, 94.77), module, ReStitcher::G_ASTPCV_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(271.140, 128.77), module, ReStitcher::G_DSTPCV_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(271.140, 161.77), module, ReStitcher::G_GRATCV_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(271.140, 200.77), module, ReStitcher::G_FCARCV_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(271.140, 234.77), module, ReStitcher::G_FMODCV_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(271.140, 268.77), module, ReStitcher::G_IMODCV_PARAM));
 
-    addInput(createInput<PJ301MPort>(Vec(303.539, 26.77), module, ReStitcher::G_FREQ_INPUT));
-    addInput(createInput<PJ301MPort>(Vec(303.539, 60.77), module, ReStitcher::G_BPTS_INPUT));
-    addInput(createInput<PJ301MPort>(Vec(303.539, 94.77), module, ReStitcher::G_ASTP_INPUT));
-    addInput(createInput<PJ301MPort>(Vec(303.539, 128.77), module, ReStitcher::G_DSTP_INPUT));
-    addInput(createInput<PJ301MPort>(Vec(303.539, 161.77), module, ReStitcher::G_GRAT_INPUT));
-    addInput(createInput<PJ301MPort>(Vec(303.539, 200.77), module, ReStitcher::G_FCAR_INPUT));
-    addInput(createInput<PJ301MPort>(Vec(303.539, 234.77), module, ReStitcher::G_FMOD_INPUT));
-    addInput(createInput<PJ301MPort>(Vec(303.539, 268.77), module, ReStitcher::G_IMOD_INPUT));
+    addInput(createInput<PJ301MPort>(Vec(301.539, 26.77), module, ReStitcher::G_FREQ_INPUT));
+    addInput(createInput<PJ301MPort>(Vec(301.539, 60.77), module, ReStitcher::G_BPTS_INPUT));
+    addInput(createInput<PJ301MPort>(Vec(301.539, 94.77), module, ReStitcher::G_ASTP_INPUT));
+    addInput(createInput<PJ301MPort>(Vec(301.539, 128.77), module, ReStitcher::G_DSTP_INPUT));
+    addInput(createInput<PJ301MPort>(Vec(301.539, 161.77), module, ReStitcher::G_GRAT_INPUT));
+    addInput(createInput<PJ301MPort>(Vec(301.539, 200.77), module, ReStitcher::G_FCAR_INPUT));
+    addInput(createInput<PJ301MPort>(Vec(301.539, 234.77), module, ReStitcher::G_FMOD_INPUT));
+    addInput(createInput<PJ301MPort>(Vec(301.539, 268.77), module, ReStitcher::G_IMOD_INPUT));
 
-    addParam(createParam<RoundBlackSnapKnob>(Vec(287.140, 306.80), module, ReStitcher::G_NOSC_PARAM));
+    addParam(createParam<RoundBlackSnapKnob>(Vec(285.140, 306.80), module, ReStitcher::G_NOSC_PARAM));
 
     // the few switches for fm toggle, probability distrobution selection
     // and mirroring toggle
-    addParam(createParam<CKSS>(Vec(220.392, 304.22), module, ReStitcher::FMTR_PARAM));
-    addParam(createParam<CKSS>(Vec(254.392, 324.22), module, ReStitcher::MIRR_PARAM));
-    addParam(createParam<CKSSThree>(Vec(220.392, 338.16), module, ReStitcher::PDST_PARAM));
+    addParam(createParam<CKSS>(Vec(218.392, 304.22), module, ReStitcher::FMTR_PARAM));
+    addParam(createParam<CKSS>(Vec(252.392, 324.22), module, ReStitcher::MIRR_PARAM));
+    addParam(createParam<CKSSThree>(Vec(218.392, 338.16), module, ReStitcher::PDST_PARAM));
 
-    addOutput(createOutput<PJ301MPort>(Vec(288.140, 342.50), module, ReStitcher::SINE_OUTPUT));
+    addOutput(createOutput<PJ301MPort>(Vec(286.140, 342.50), module, ReStitcher::SINE_OUTPUT));
   }
 };
