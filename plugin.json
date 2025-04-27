@@ -1,0 +1,10 @@
+{
+  "slug": "restoch",
+  "name": "restoch",
+  "version": "2.0.0",
+  "license": "GPL-3.0-or-later",
+  "brand": "Shortwav Labs",
+  "author": "Stephane Pericat",
+  "authorEmail": "contact@shortwavlabs.com",
+  "modules": []
+}
