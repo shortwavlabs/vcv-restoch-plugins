@@ -110,7 +110,7 @@ struct ReGrandyWidget : ModuleWidget
   ReGrandyWidget(ReGrandy *module)
   {
     setModule(module);
-    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/ReGrandy-v4c.svg")));
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/ReGrandy-v4d.svg")));
 
     addChild(createWidget<ScrewSilver>(Vec(0, 0)));
     addChild(createWidget<ScrewSilver>(Vec(box.size.x - 1 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
