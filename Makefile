@@ -18,6 +18,7 @@ SOURCES += $(wildcard src/utils/*.cpp)
 # The compiled plugin and "plugin.json" are automatically added.
 DISTRIBUTABLES += res
 DISTRIBUTABLES += $(wildcard LICENSE*)
+DISTRIBUTABLES += presets
 
 # Include the Rack plugin Makefile framework
 include $(RACK_DIR)/plugin.mk
