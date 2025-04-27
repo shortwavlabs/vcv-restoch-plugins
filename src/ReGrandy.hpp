@@ -1,3 +1,9 @@
+/*
+ * ReGrandy.cpp
+ *
+ * VCV Rack Module with a single GRANDY oscillator
+ */
+
 #pragma once
 
 #include "plugin.hpp"
