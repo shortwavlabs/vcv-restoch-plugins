@@ -18,7 +18,16 @@
     {
       "slug": "ReGrandy",
       "name": "ReGrandy",
-      "description": "A stochastic granular oscillator",
+      "description": "A stochastic synthesis generator.",
+      "tags": [
+        "Granular",
+        "VCO"
+      ]
+    },
+    {
+      "slug": "ReStitcher",
+      "name": "ReStitcher",
+      "description": "A module for stochastic concatenation",
       "tags": [
         "Granular",
         "VCO"
