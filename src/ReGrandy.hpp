@@ -81,25 +81,25 @@ struct ReGrandy : Module
   {
     config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
 
-    configParam(FREQ_PARAM, -4.0, 3.0, 0.0);
-    configParam(FREQCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(BPTS_PARAM, 3, MAX_BPTS, 0);
-    configParam(BPTSCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(DSTP_PARAM, 0.f, 1.f, 0.f);
-    configParam(DSTPCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(ASTP_PARAM, 0.f, 1.f, 0.f);
-    configParam(ASTPCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(PDST_PARAM, 0.f, 2.f, 0.f);
-    configParam(MIRR_PARAM, 0.f, 1.f, 0.f);
-    configParam(GRAT_PARAM, -6.f, 3.f, 0.f);
-    configParam(GRATCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(ENVS_PARAM, 1.0f, 4.0f, 4.0f);
-    configParam(FCAR_PARAM, -4.f, 4.f, 0.f);
-    configParam(FMOD_PARAM, -4.f, 4.f, 0.f);
-    configParam(FMODCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(IMOD_PARAM, -4.f, 4.f, 0.f);
-    configParam(IMODCV_PARAM, 0.f, 1.f, 0.f);
-    configParam(FMTR_PARAM, 0.0f, 1.0f, 0.0f);
+    configParam(FREQ_PARAM, -4.0, 3.0, 0.0, "Frequency");
+    configParam(FREQCV_PARAM, 0.f, 1.f, 0.f, "Frequency CV");
+    configParam(BPTS_PARAM, 3, MAX_BPTS, 0, "Bandpass");
+    configParam(BPTSCV_PARAM, 0.f, 1.f, 0.f, "Bandpass CV");
+    configParam(DSTP_PARAM, 0.f, 1.f, 0.f, "Duty");
+    configParam(DSTPCV_PARAM, 0.f, 1.f, 0.f, "Duty CV");
+    configParam(ASTP_PARAM, 0.f, 1.f, 0.f, "Attack");
+    configParam(ASTPCV_PARAM, 0.f, 1.f, 0.f, "Attack CV");
+    configParam(PDST_PARAM, 0.f, 2.f, 0.f, "Pulse Width");
+    configParam(MIRR_PARAM, 0.f, 1.f, 0.f, "Mirror");
+    configParam(GRAT_PARAM, -6.f, 3.f, 0.f, "Grain");
+    configParam(GRATCV_PARAM, 0.f, 1.f, 0.f, "Grain CV");
+    configParam(ENVS_PARAM, 1.0f, 4.0f, 4.0f, "Envelope");
+    configParam(FCAR_PARAM, -4.f, 4.f, 0.f, "Carrier");
+    configParam(FMOD_PARAM, -4.f, 4.f, 0.f, "F Modulator");
+    configParam(FMODCV_PARAM, 0.f, 1.f, 0.f, "F Modulator CV");
+    configParam(IMOD_PARAM, -4.f, 4.f, 0.f, "I Modulator");
+    configParam(IMODCV_PARAM, 0.f, 1.f, 0.f, "I Modulator CV");
+    configParam(FMTR_PARAM, 0.0f, 1.0f, 0.0f, "FM");
   }
 
   void process(const ProcessArgs &args) override;
