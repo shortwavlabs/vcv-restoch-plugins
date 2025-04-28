@@ -109,6 +109,11 @@ struct ReGrandy : Module
   }
 
   void process(const ProcessArgs &args) override;
+
+  void updateEnvelopeType(const ProcessArgs &args);
+  void processModulationInputs();
+  void updateGranularParameters();
+  void updateFMParameters();
 };
 
 struct ReGrandyWidget : ModuleWidget
