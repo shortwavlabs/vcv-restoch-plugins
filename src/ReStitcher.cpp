@@ -52,7 +52,7 @@ void ReStitcher::process(const ProcessArgs &args)
     freq_sig = (inputs[F_INPUT + i].getVoltage() / 5.f) * params[FCV_PARAM + i].getValue();
     freq_sig += g_freq_sig;
     freq_sig += params[F_PARAM + i].getValue();
-    gos[i].freq = clamp(261.626f * powf(2.0f, freq_sig), 1.f, 3000.f);
+    gos[i].freq = clamp(dsp::FREQ_C4 * powf(2.0f, freq_sig), 1.f, 3000.f);
 
     bpts_sig = 5.f * dsp::quadraticBipolar((inputs[B_INPUT + i].getVoltage() / 5.f) * params[BCV_PARAM + i].getValue());
     bpts_sig += g_bpts_sig;
@@ -67,17 +67,17 @@ void ReStitcher::process(const ProcessArgs &args)
     gos[i].max_dur_step = rescale(params[D_PARAM + i].getValue() + (dstp_sig / 4.f), 0.0, 1.0, 0.01, 0.3);
 
     grat_sig = (inputs[G_INPUT + i].getVoltage() / 5.f) * params[GCV_PARAM].getValue();
-    gos[i].g_rate = clamp(261.626f * powf(2.0f, grat_sig + g_grat_sig), 1e-6, 3000.f);
+    gos[i].g_rate = clamp(dsp::FREQ_C4 * powf(2.0f, grat_sig + g_grat_sig), 1e-6, 3000.f);
 
     // fm control sigs
     fcar_sig = g_grat_sig;
     fcar_sig += g_fcar_sig;
     fcar_sig += params[FCAR_PARAM + i].getValue();
-    gos[i].f_car = clamp(261.626f * powf(2.0f, fcar_sig), 1.f, 3000.f);
+    gos[i].f_car = clamp(dsp::FREQ_C4 * powf(2.0f, fcar_sig), 1.f, 3000.f);
 
     // no local controls for the frequency of the modulating signal, so just
     // respond to the global control values
-    gos[i].f_mod = clamp(261.626f * powf(2.0f, g_fmod_sig), 1.f, 3000.f);
+    gos[i].f_mod = clamp(dsp::FREQ_C4 * powf(2.0f, g_fmod_sig), 1.f, 3000.f);
 
     imod_sig = dsp::quadraticBipolar((inputs[IMOD_INPUT + i].getVoltage() / 5.f) * params[IMODCV_PARAM + i].getValue());
     imod_sig += g_imod_sig;

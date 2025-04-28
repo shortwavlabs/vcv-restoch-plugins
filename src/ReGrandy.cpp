@@ -37,12 +37,12 @@ void ReGrandy::process(const ProcessArgs &args)
   freq_sig += params[FREQ_PARAM].getValue();
   grat_sig += params[GRAT_PARAM].getValue();
 
-  go.freq = clamp(261.626f * powf(2.0f, freq_sig), 1.f, 3000.f);
+  go.freq = clamp(dsp::FREQ_C4 * powf(2.0f, freq_sig), 1.f, 3000.f);
 
   go.max_amp_step = rescale(params[ASTP_PARAM].getValue() + (astp_sig / 4.f), 0.0, 1.0, 0.05, 0.3);
   go.max_dur_step = rescale(params[DSTP_PARAM].getValue() + (dstp_sig / 4.f), 0.0, 1.0, 0.01, 0.3);
   go.freq_mul = rescale(params[FREQ_PARAM].getValue(), -1.0, 1.0, 0.05, 4.0);
-  go.g_rate = clamp(261.626f * powf(2.0f, grat_sig), 1e-6, 3000.f);
+  go.g_rate = clamp(dsp::FREQ_C4 * powf(2.0f, grat_sig), 1e-6, 3000.f);
 
   go.dt = (DistType)params[PDST_PARAM].getValue();
 
@@ -52,8 +52,8 @@ void ReGrandy::process(const ProcessArgs &args)
   fmod_sig += params[FMOD_PARAM].getValue();
   imod_sig += params[IMOD_PARAM].getValue();
 
-  go.f_car = clamp(261.626f * powf(2.0f, params[FCAR_PARAM].getValue()), 1.f, 5000.f);
-  go.f_mod = clamp(261.626f * powf(2.0f, fmod_sig), 1.f, 5000.f);
+  go.f_car = clamp(dsp::FREQ_C4 * powf(2.0f, params[FCAR_PARAM].getValue()), 1.f, 5000.f);
+  go.f_mod = clamp(dsp::FREQ_C4 * powf(2.0f, fmod_sig), 1.f, 5000.f);
 
   go.i_mod = rescale(params[IMOD_PARAM].getValue(), 0.f, 1.f, 10.f, 3000.f);
 
