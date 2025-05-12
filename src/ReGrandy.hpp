@@ -53,6 +53,7 @@ struct ReGrandy : Module
   enum OutputIds
   {
     SINE_OUTPUT,
+    INV_OUTPUT,
     NUM_OUTPUTS
   };
 
@@ -121,57 +122,65 @@ struct ReGrandyWidget : ModuleWidget
   ReGrandyWidget(ReGrandy *module)
   {
     setModule(module);
-    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/18HP_Blank.svg")));
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/21HP_Blank.svg")));
 
     addChild(createWidget<ScrewSilver>(Vec(0, 0)));
     addChild(createWidget<ScrewSilver>(Vec(box.size.x - 1 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-    // knob params
-    addParam(createParam<RoundLargeBlackKnob>(Vec(40.307, 43.42), module, ReGrandy::FREQ_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(65.360, 87.21), module, ReGrandy::FREQCV_PARAM));
+    // Frequency
+    addParam(createParam<RoundLargeBlackKnob>(Vec(19, 20), module, ReGrandy::FREQ_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(26, 80), module, ReGrandy::FREQCV_PARAM));
+    addInput(createInput<PJ301MPort>(Vec(26, 115), module, ReGrandy::FREQ_INPUT));
 
-    addParam(createParam<RoundLargeBlackKnob>(Vec(108.307, 43.42), module, ReGrandy::BPTS_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(133.360, 87.21), module, ReGrandy::BPTSCV_PARAM));
+    // Breakpoints
+    addParam(createParam<RoundLargeBlackKnob>(Vec(69, 20), module, ReGrandy::BPTS_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(76, 80), module, ReGrandy::BPTSCV_PARAM));
+    addInput(createInput<PJ301MPort>(Vec(76, 115), module, ReGrandy::BPTS_INPUT));
 
-    addParam(createParam<RoundLargeBlackKnob>(Vec(18.307, 138.54), module, ReGrandy::DSTP_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(43.360, 184.10), module, ReGrandy::DSTPCV_PARAM));
+    // DSTP
+    addParam(createParam<RoundLargeBlackKnob>(Vec(119, 20), module, ReGrandy::DSTP_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(126, 80), module, ReGrandy::DSTPCV_PARAM));
+    addInput(createInput<PJ301MPort>(Vec(126, 115), module, ReGrandy::DSTP_INPUT));
 
-    addParam(createParam<RoundLargeBlackKnob>(Vec(88.307, 138.54), module, ReGrandy::ASTP_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(111.360, 184.10), module, ReGrandy::ASTPCV_PARAM));
+    // DSTP
+    addParam(createParam<RoundLargeBlackKnob>(Vec(169, 20), module, ReGrandy::ASTP_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(176, 80), module, ReGrandy::ASTPCV_PARAM));
+    addInput(createInput<PJ301MPort>(Vec(176, 115), module, ReGrandy::ASTP_INPUT));
 
-    addParam(createParam<CKSSThree>(Vec(147.417, 140.64), module, ReGrandy::PDST_PARAM));
-    addParam(createParam<CKSS>(Vec(147.379, 195.07), module, ReGrandy::MIRR_PARAM));
+    // Grat
+    addParam(createParam<RoundLargeBlackKnob>(Vec(19, 200), module, ReGrandy::GRAT_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(26, 260), module, ReGrandy::GRATCV_PARAM));
+    addInput(createInput<PJ301MPort>(Vec(26, 295), module, ReGrandy::GRAT_INPUT));
 
-    addParam(createParam<RoundSmallBlackKnob>(Vec(39.360, 236.98), module, ReGrandy::GRAT_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(73.360, 236.98), module, ReGrandy::GRATCV_PARAM));
+    // F Mod
+    addParam(createParam<RoundLargeBlackKnob>(Vec(69, 200), module, ReGrandy::FMOD_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(76, 260), module, ReGrandy::FMODCV_PARAM));
+    addInput(createInput<PJ301MPort>(Vec(76, 295), module, ReGrandy::FMOD_INPUT));
 
-    addParam(createParam<RoundBlackSnapKnob>(Vec(145.195, 233.69), module, ReGrandy::ENVS_PARAM));
+    // I Mod
+    addParam(createParam<RoundLargeBlackKnob>(Vec(119, 200), module, ReGrandy::IMOD_PARAM));
+    addParam(createParam<RoundSmallBlackKnob>(Vec(126, 260), module, ReGrandy::IMODCV_PARAM));
+    addInput(createInput<PJ301MPort>(Vec(126, 295), module, ReGrandy::IMOD_INPUT));
 
-    // for fm
-    addParam(createParam<RoundSmallBlackKnob>(Vec(27.360, 295.25), module, ReGrandy::FCAR_PARAM));
+    // F Carrier
+    addParam(createParam<RoundLargeBlackKnob>(Vec(169, 200), module, ReGrandy::FCAR_PARAM));
 
-    addParam(createParam<RoundSmallBlackKnob>(Vec(67.360, 295.25), module, ReGrandy::FMOD_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(101.360, 295.25), module, ReGrandy::FMODCV_PARAM));
+    // Envs
+    addParam(createParam<RoundBlackSnapKnob>(Vec(171, 257), module, ReGrandy::ENVS_PARAM));
 
-    addParam(createParam<RoundSmallBlackKnob>(Vec(17.360, 341.84), module, ReGrandy::IMOD_PARAM));
-    addParam(createParam<RoundSmallBlackKnob>(Vec(51.360, 341.84), module, ReGrandy::IMODCV_PARAM));
+    // PDST Mode 
+    addParam(createParam<CKSSThree>(Vec(80.5, 155), module, ReGrandy::PDST_PARAM));
 
-    addParam(createParam<CKSS>(Vec(15.360, 250.01), module, ReGrandy::FMTR_PARAM));
+    // FM Toggle
+    addParam(createParam<CKSS>(Vec(105.5, 155), module, ReGrandy::FMTR_PARAM));
 
-    // signal inputs
-    addInput(createInput<PJ301MPort>(Vec(28.967, 86.61), module, ReGrandy::FREQ_INPUT));
-    addInput(createInput<PJ301MPort>(Vec(96.967, 86.61), module, ReGrandy::BPTS_INPUT));
+    // Mirror Mode
+    addParam(createParam<CKSS>(Vec(130.5, 155), module, ReGrandy::MIRR_PARAM));
 
-    addInput(createInput<PJ301MPort>(Vec(6.976, 181.72), module, ReGrandy::ASTP_INPUT));
-    addInput(createInput<PJ301MPort>(Vec(74.966, 181.72), module, ReGrandy::DSTP_INPUT));
+    // OSC Output
+    addOutput(createOutput<PJ301MPort>(Vec(76, 335), module, ReGrandy::SINE_OUTPUT));
 
-    addInput(createInput<PJ301MPort>(Vec(106.966, 236.50), module, ReGrandy::GRAT_INPUT));
-
-    // for fm
-    addInput(createInput<PJ301MPort>(Vec(134.966, 293.72), module, ReGrandy::FMOD_INPUT));
-    addInput(createInput<PJ301MPort>(Vec(86.966, 341.50), module, ReGrandy::IMOD_INPUT));
-
-    // output signal
-    addOutput(createOutput<PJ301MPort>(Vec(128.003, 341.50), module, ReGrandy::SINE_OUTPUT));
+    // Inv Output
+    addOutput(createOutput<PJ301MPort>(Vec(126, 335), module, ReGrandy::INV_OUTPUT));
   }
 };

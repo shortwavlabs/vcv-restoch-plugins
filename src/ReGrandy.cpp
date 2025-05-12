@@ -110,6 +110,7 @@ void ReGrandy::process(const ProcessArgs &args)
 
   // Output the result
   outputs[SINE_OUTPUT].setVoltage(VOLTAGE_SCALE * go.out());
+  outputs[INV_OUTPUT].setVoltage(-(VOLTAGE_SCALE * go.out()));
 }
 
 Model *modelReGrandy = createModel<ReGrandy, ReGrandyWidget>("ReGrandy");
