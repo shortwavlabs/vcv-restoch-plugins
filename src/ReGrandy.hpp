@@ -122,7 +122,7 @@ struct ReGrandyWidget : ModuleWidget
   ReGrandyWidget(ReGrandy *module)
   {
     setModule(module);
-    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/21HP_Blank.svg")));
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/RGDY_TMP.svg")));
 
     addChild(createWidget<ScrewSilver>(Vec(0, 0)));
     addChild(createWidget<ScrewSilver>(Vec(box.size.x - 1 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
@@ -142,7 +142,7 @@ struct ReGrandyWidget : ModuleWidget
     addParam(createParam<RoundSmallBlackKnob>(Vec(126, 80), module, ReGrandy::DSTPCV_PARAM));
     addInput(createInput<PJ301MPort>(Vec(126, 115), module, ReGrandy::DSTP_INPUT));
 
-    // DSTP
+    // ASTP
     addParam(createParam<RoundLargeBlackKnob>(Vec(169, 20), module, ReGrandy::ASTP_PARAM));
     addParam(createParam<RoundSmallBlackKnob>(Vec(176, 80), module, ReGrandy::ASTPCV_PARAM));
     addInput(createInput<PJ301MPort>(Vec(176, 115), module, ReGrandy::ASTP_INPUT));
