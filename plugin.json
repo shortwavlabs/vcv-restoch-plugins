@@ -8,37 +8,12 @@
   "authorEmail": "contact@shortwavlabs.com",
   "modules": [
     {
-      "slug": "Blank",
-      "name": "Blank",
-      "description": "A blank module",
-      "tags": [
-        "Blank"
-      ]
-    },
-    {
       "slug": "ReGrandy",
       "name": "ReGrandy",
       "description": "A stochastic synthesis generator.",
       "tags": [
         "Granular",
         "VCO"
-      ]
-    },
-    {
-      "slug": "ReStitcher",
-      "name": "ReStitcher",
-      "description": "A module for stochastic concatenation",
-      "tags": [
-        "Granular",
-        "VCO"
-      ]
-    },
-    {
-      "slug": "ReGenEcho",
-      "name": "ReGenEcho",
-      "description": "A module for stochastic decomposition make of it what you will",
-      "tags": [
-        "Effect"
       ]
     }
   ]
