@@ -6,7 +6,7 @@
   "brand": "Shortwav Labs",
   "author": "Stephane Pericat",
   "authorEmail": "contact@shortwavlabs.com",
-  "manualUrl": "",
+  "manualUrl": "https://github.com/shortwavlabs/vcv-restoch-plugins/blob/main/docs/INDEX.md",
   "sourceUrl": "https://github.com/shortwavlabs/vcv-restoch-plugins/src",
   "modules": [
     {
