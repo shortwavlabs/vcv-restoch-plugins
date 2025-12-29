@@ -577,7 +577,7 @@ Don't over-document:
 - **Code Comments**: In `.cpp` and `.hpp` files
 - **API Reference**: `docs/API.md`
 - **User Guides**: `docs/QUICKSTART.md`, `docs/ADVANCED.md`
-- **README**: `docs/README.md`
+- **README**: `README.md`
 - **Changelog**: `docs/CHANGELOG.md`
 
 ### Documentation Standards

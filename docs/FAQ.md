@@ -57,7 +57,7 @@ Yes! RestocK is open-source under GPL-3.0-or-later license. Free to use, modify,
 4. Restart VCV Rack
 
 **Method 2 (Manual):**
-See [Installation Guide](README.md#installation)
+See [Installation Guide](../README.md#installation)
 
 ### I'm new to synthesis. Can I use ReGrandy?
 

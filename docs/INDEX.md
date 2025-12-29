@@ -5,8 +5,8 @@ Complete documentation for the RestocK VCV Rack plugin and ReGrandy module.
 ## 📚 Documentation Structure
 
 ```
-docs/
 ├── README.md              ⭐ Main overview and quick start
+docs/
 ├── API.md                 🔧 Complete API reference
 ├── QUICKSTART.md          🚀 Step-by-step tutorials
 ├── ADVANCED.md            🎓 Deep dive and advanced techniques
@@ -29,7 +29,7 @@ docs/
 
 ### New Users Start Here
 
-1. **[Main README](README.md)** - Overview, features, installation
+1. **[Main README](../README.md)** - Overview, features, installation
 2. **[QuickStart Guide](QUICKSTART.md)** - Your first sounds in minutes
 3. **[Example 01: First Sound](examples/basic/01-first-sound.md)** - Hands-on tutorial
 4. **[FAQ](FAQ.md)** - Common questions answered
@@ -58,20 +58,20 @@ docs/
 
 ### Installation & Setup
 
-- [Installation Instructions](README.md#installation)
+- [Installation Instructions](../README.md#installation)
 - [Building from Source](CONTRIBUTING.md#development-setup)
 - [System Requirements](README.md#technical-specifications)
 
 ### Learning ReGrandy
 
-- [What is Dynamic Stochastic Synthesis?](README.md#what-is-dynamic-stochastic-synthesis)
+- [What is Dynamic Stochastic Synthesis?](../README.md#what-is-dynamic-stochastic-synthesis)
 - [Understanding Parameters](QUICKSTART.md#understanding-the-parameters)
 - [First Sound Tutorial](examples/basic/01-first-sound.md)
 - [Parameter Deep Dive](ADVANCED.md#probability-distributions-deep-dive)
 
 ### Sound Design
 
-- [Sound Design Tips](README.md#sound-design-tips)
+- [Sound Design Tips](../README.md#sound-design-tips)
 - [Sound Design Recipes](ADVANCED.md#sound-design-recipes)
 - [Example Patches](examples/README.md)
 - [Preset Collection](examples/README.md#preset-collection)
@@ -150,7 +150,7 @@ docs/
 
 ## 📝 Document Descriptions
 
-### [README.md](README.md)
+### [README.md](../README.md)
 **Main overview document**
 - Plugin description and features
 - Installation instructions

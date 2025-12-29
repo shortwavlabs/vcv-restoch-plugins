@@ -66,7 +66,7 @@ make install
 5. **Shape the Texture**: Adjust GRAT (granulation rate) to change the grain density
 6. **Connect Output**: Patch the SINE_OUTPUT to your audio destination
 
-For detailed usage instructions, see the [Quickstart Guide](QUICKSTART.md).
+For detailed usage instructions, see the [Quickstart Guide](./docs/QUICKSTART.md).
 
 ## Panel Controls
 
