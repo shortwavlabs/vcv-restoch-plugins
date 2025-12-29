@@ -265,7 +265,7 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Credits
 
-### RestocK 2.0.0
+### RestocK 2.x
 - **Developer**: Stephane Pericat
 - **Company**: Shortwav Labs
 - **Email**: contact@shortwavlabs.com

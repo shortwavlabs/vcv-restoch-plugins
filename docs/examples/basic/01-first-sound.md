@@ -255,5 +255,5 @@ You've created your first stochastic synthesis patch!
 
 **Created by**: Shortwav Labs  
 **Difficulty**: Beginner  
-**Version**: RestocK 2.0.0  
+**Version**: RestocK 2.0.1
 **Last Updated**: 2024-12-28

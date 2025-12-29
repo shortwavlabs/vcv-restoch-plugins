@@ -361,7 +361,7 @@ See [LICENSE.md](../LICENSE.md) for details.
 ## 📅 Last Updated
 
 **Date**: 2024-12-28  
-**Version**: RestocK 2.0.0  
+**Version**: RestocK 2.0.1
 **Status**: Current
 
 ---

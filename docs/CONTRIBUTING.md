@@ -182,7 +182,7 @@ VCV Rack crashes after 2-3 seconds
 
 **Environment**
 - VCV Rack Version: 2.5.0
-- RestocK Version: 2.0.0
+- RestocK Version: 2.0.1
 - OS: macOS 14.1
 - CPU: Apple M2
 

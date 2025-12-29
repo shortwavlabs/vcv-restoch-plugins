@@ -594,6 +594,6 @@ We'll add popular questions to this FAQ.
 ---
 
 **Last Updated**: 2024-12-28  
-**Version**: RestocK 2.0.0
+**Version**: RestocK 2.0.1
 
 **Found an error in the FAQ?** [Open an issue](https://github.com/shortwavlabs/restock/issues) or submit a PR!

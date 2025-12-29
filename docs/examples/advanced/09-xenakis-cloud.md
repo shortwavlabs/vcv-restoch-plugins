@@ -500,7 +500,7 @@ This technique is inspired by Xenakis's works like:
 
 **Created by**: Shortwav Labs  
 **Difficulty**: Advanced  
-**Version**: RestocK 2.0.0  
+**Version**: RestocK 2.0.1
 **Last Updated**: 2024-12-28
 
 **Estimated CPU**: 15-25%  
