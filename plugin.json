@@ -7,7 +7,7 @@
   "author": "Stephane Pericat",
   "authorEmail": "contact@shortwavlabs.com",
   "manualUrl": "https://github.com/shortwavlabs/vcv-restoch-plugins/blob/main/docs/INDEX.md",
-  "sourceUrl": "https://github.com/shortwavlabs/vcv-restoch-plugins/src",
+  "sourceUrl": "https://github.com/shortwavlabs/vcv-restoch-plugins/tree/main/src",
   "modules": [
     {
       "slug": "ReGrandy",
