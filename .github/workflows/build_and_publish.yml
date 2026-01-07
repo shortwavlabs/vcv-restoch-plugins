@@ -86,6 +86,9 @@ jobs:
             SDK_DIR=$(ls -d Rack-SDK* | head -n 1)
             mv "$SDK_DIR" Rack-SDK
           fi
+          # Move SDK to expected location in dep/ directory
+          mkdir -p dep
+          mv Rack-SDK dep/Rack-SDK
           echo "RACK_DIR=$(pwd)/dep/Rack-SDK" >> $GITHUB_ENV
 
       # ------------------------------------------------------------------------
