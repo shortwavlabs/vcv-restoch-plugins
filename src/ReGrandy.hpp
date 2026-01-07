@@ -9,6 +9,7 @@
 #include "plugin.hpp"
 #include "dsp/resampler.hpp"
 #include "utils/GrandyOscillator.hpp"
+#include "utils/Limiter.hpp"
 
 struct ReGrandy : Module
 {
@@ -68,6 +69,8 @@ struct ReGrandy : Module
   dsp::SchmittTrigger smpTrigger;
 
   GendyOscillator go;
+  
+  AudioLimiter limiter;
 
   EnvType env = (EnvType)1;
 
@@ -107,9 +110,17 @@ struct ReGrandy : Module
     configParam(IMOD_PARAM, -4.f, 4.f, 0.f, "FM Modulation Index");
     configParam(IMODCV_PARAM, 0.f, 1.f, 0.f, "FM Modulation Index CV Amount");
     configParam(FMTR_PARAM, 0.0f, 1.0f, 0.0f, "FM Mode Toggle");
+    
+    // Initialize limiter with default sample rate
+    limiter.init(APP->engine->getSampleRate());
   }
 
   void process(const ProcessArgs &args) override;
+  
+  void onSampleRateChange() override
+  {
+    limiter.init(APP->engine->getSampleRate());
+  }
 
   void updateEnvelopeType(const ProcessArgs &args);
   void processModulationInputs();

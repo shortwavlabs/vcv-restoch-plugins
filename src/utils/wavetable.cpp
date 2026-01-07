@@ -19,10 +19,10 @@ namespace rack {
       float out = in;
 
       if (in > ub) {
-        out = out - (in - ub);
+        out = ub - (in - ub);
       }
       else if (in < lb) {
-        out = out - (in - lb);
+        out = lb + (lb - in);
       }
       
       return out;

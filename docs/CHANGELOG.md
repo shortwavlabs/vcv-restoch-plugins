@@ -176,6 +176,18 @@ void process(const ProcessArgs &args) override;
 
 ## Breaking Changes
 
+### 2.1.0
+
+**Minor Changes:**
+ - Fixed issue with mirroring
+ - Added limiter to prevent audio clipping
+ - Added unit tests and Github Action workflow script
+
+### 2.0.1
+
+**Patch Update:**
+ - Added link to documentation
+
 ### 2.0.0
 
 **Major Breaking Changes:**
