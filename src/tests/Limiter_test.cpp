@@ -20,6 +20,11 @@
 #include <string>
 #include <cstdlib>
 
+// Define M_PI if not already defined (needed for Windows/MSVC)
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
 // Include the limiter
 #include "../utils/Limiter.hpp"
 
