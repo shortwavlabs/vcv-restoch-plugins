@@ -108,9 +108,15 @@ void ReGrandy::process(const ProcessArgs &args)
   // Process audio
   go.process(deltaTime);
 
-  // Output the result
-  outputs[SINE_OUTPUT].setVoltage(VOLTAGE_SCALE * go.out());
-  outputs[INV_OUTPUT].setVoltage(-(VOLTAGE_SCALE * go.out()));
+  // Get raw output
+  float rawOutput = go.out();
+  
+  // Process through limiter for anti-clipping and speaker protection
+  float limitedOutput = limiter.process(rawOutput);
+
+  // Output the limited signal
+  outputs[SINE_OUTPUT].setVoltage(VOLTAGE_SCALE * limitedOutput);
+  outputs[INV_OUTPUT].setVoltage(-(VOLTAGE_SCALE * limitedOutput));
 }
 
 Model *modelReGrandy = createModel<ReGrandy, ReGrandyWidget>("ReGrandy");

@@ -24,6 +24,22 @@ Tests for the GendyOscillator (granular stochastic dynamic synthesis):
 
 **Total: 32 test cases, 2313 assertions**
 
+### Limiter_test.cpp
+Tests for the AudioLimiter (dynamic limiter and anti-clipping system):
+- Initialization and configuration (1 test)
+- Signal passthrough at safe levels (1 test)
+- Peak limiting and gain reduction (1 test)
+- Attack and release response (2 tests)
+- Lookahead processing (1 test)
+- Automatic makeup gain (1 test)
+- Hard clipping protection (1 test)
+- Reset functionality (1 test)
+- Different sample rates (1 test)
+- Continuous signal processing (1 test)
+- Transient handling (1 test)
+
+**Total: 12 test cases, 50000+ assertions**
+
 ## Running Tests
 
 From the repository root:
@@ -31,6 +47,9 @@ From the repository root:
 ```bash
 # Run all tests
 ./run_tests.sh
+
+# Run a specific test
+g++ -std=c++11 -I. -o Limiter_test src/tests/Limiter_test.cpp && ./Limiter_test
 
 # Clean build and run
 ./run_tests.sh --clean
