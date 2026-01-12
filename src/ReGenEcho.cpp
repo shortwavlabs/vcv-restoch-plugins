@@ -1,12 +1,3 @@
-/*
- * ReGenEcho.cpp
- * 
- * GenEcho (Gendy / Grandy Echo module)
- * Samuel Laing - 2019
- * 
- * VCV Rack module that uses granular stochastic methods to alter a sample
- */
-
 #include "ReGenEcho.hpp"
 #include <cstring>
 
