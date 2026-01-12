@@ -18,6 +18,16 @@
         "Granular",
         "VCO"
       ]
+    },
+    {
+      "slug": "ReGenEcho",
+      "name": "ReGenEcho",
+      "description": "A granular stochastic sample manipulation module.",
+      "tags": [
+        "Granular",
+        "Echo",
+        "Sampler"
+      ]
     }
   ]
 }

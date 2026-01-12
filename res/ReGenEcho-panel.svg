@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ReGenEcho Panel SVG -->
+<svg width="90" height="380" viewBox="0 0 90 380" xmlns="http://www.w3.org/2000/svg">
+    <g id="Background">
+        <rect width="90" height="380" fill="#929292"/>
+        <path fill="#d5d5d5" d="M 0 0 L 90 0 L 90 380 L 0 380 Z" opacity="0.1"/>
+    </g>
+    
+    <g id="Decorative">
+        <path fill="#646464" d="M 5 10 L 85 10 L 85 25 L 5 25 Z"/>
+        <text x="45" y="20" font-family="Arial" font-size="8" text-anchor="middle" fill="#d5d5d5">ReGenEcho</text>
+    </g>
+    
+    <!-- Sample Length knob label -->
+    <text x="10" y="38" font-family="Arial" font-size="6" fill="#333">SLEN</text>
+    
+    <!-- Audio input labels -->
+    <text x="10" y="67" font-family="Arial" font-size="5" fill="#333">AUDIO</text>
+    <text x="10" y="93" font-family="Arial" font-size="5" fill="#333">GATE</text>
+    <text x="58" y="42" font-family="Arial" font-size="5" fill="#333">RESET</text>
+    
+    <!-- Switch labels -->
+    <text x="61" y="70" font-family="Arial" font-size="5" fill="#333">ACCM</text>
+    <text x="61" y="101" font-family="Arial" font-size="5" fill="#333">MIRR</text>
+    <text x="61" y="130" font-family="Arial" font-size="5" fill="#333">PDST</text>
+    
+    <!-- Breakpoint Spacing labels -->
+    <text x="10" y="137" font-family="Arial" font-size="6" fill="#333">BPTS</text>
+    <text x="56" y="166" font-family="Arial" font-size="5" fill="#333">CV</text>
+    
+    <!-- Amplitude Step labels -->
+    <text x="10" y="206" font-family="Arial" font-size="6" fill="#333">ASTP</text>
+    <text x="56" y="235" font-family="Arial" font-size="5" fill="#333">CV</text>
+    
+    <!-- Duration Step labels -->
+    <text x="10" y="275" font-family="Arial" font-size="6" fill="#333">DSTP</text>
+    <text x="56" y="304" font-family="Arial" font-size="5" fill="#333">CV</text>
+    
+    <!-- Envelope Type label -->
+    <text x="8" y="342" font-family="Arial" font-size="6" fill="#333">ENVS</text>
+    
+    <!-- Output label -->
+    <text x="51" y="345" font-family="Arial" font-size="5" fill="#333">OUT</text>
+</svg>
