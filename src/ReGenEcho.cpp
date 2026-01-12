@@ -90,7 +90,7 @@ void ReGenEcho::process(const ProcessArgs &args)
         p += INV_CROSSFADE_SAMPLES;
         s_i++;
       }
-      DEBUG("Finished sampling");
+
       sampling = false;
     }
     else
