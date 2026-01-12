@@ -13,6 +13,7 @@ docs/
 ├── FAQ.md                 ❓ Frequently asked questions
 ├── CHANGELOG.md           📋 Version history
 ├── CONTRIBUTING.md        🤝 Developer guidelines
+├── REGENECHO.md           ✨ ReGenEcho module documentation
 └── examples/              💡 Real-world patches and presets
     ├── README.md          📖 Examples index
     ├── basic/             🟢 Beginner examples
@@ -68,6 +69,13 @@ docs/
 - [Understanding Parameters](QUICKSTART.md#understanding-the-parameters)
 - [First Sound Tutorial](examples/basic/01-first-sound.md)
 - [Parameter Deep Dive](ADVANCED.md#probability-distributions-deep-dive)
+
+### Learning ReGenEcho
+
+- [ReGenEcho Module Documentation](REGENECHO.md)
+- [Overview and Features](REGENECHO.md#overview)
+- [Parameter Reference](REGENECHO.md#parameters)
+- [Usage Tips and Techniques](REGENECHO.md#usage-tips)
 
 ### Sound Design
 
@@ -149,6 +157,18 @@ docs/
 ---
 
 ## 📝 Document Descriptions
+
+### [REGENECHO.md](REGENECHO.md)
+**ReGenEcho module documentation**
+- Module overview and features
+- Complete parameter reference
+- Input and output descriptions
+- Usage tips and techniques
+- Signal flow diagram
+- Technical specifications
+- Factory presets
+
+**For ReGenEcho users**
 
 ### [README.md](../README.md)
 **Main overview document**
@@ -271,6 +291,9 @@ docs/
 **...find example patches**
 → [Examples Directory](examples/README.md)
 
+**...learn about ReGenEcho**
+→ [ReGenEcho Documentation](REGENECHO.md)
+
 ---
 
 ## 📊 Documentation Statistics
@@ -360,8 +383,8 @@ See [LICENSE.md](../LICENSE.md) for details.
 
 ## 📅 Last Updated
 
-**Date**: 2024-12-28  
-**Version**: RestocK 2.0.1
+**Date**: 2026-01-11  
+**Version**: RestocK 2.2.0
 **Status**: Current
 
 ---
